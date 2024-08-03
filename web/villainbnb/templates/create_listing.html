@@ -1,0 +1,25 @@
+<!-- templates/create_listing.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Create Listing</h1>
+    <a href="{{ url_for('index') }}">Return to Home</a>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form method="POST" action="{{ url_for('create_listing') }}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <label for="image_url">Image URL:</label>
+        <input type="text" id="image_url" name="image_url" required>
+        <button type="submit">Create Listing</button>
+    </form>
+{% endblock %}

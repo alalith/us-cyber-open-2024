@@ -1,0 +1,183 @@
+/* villainous.css */
+
+/* General Styles */
+body {
+    font-family: 'Creepster', cursive;
+    background-color: #151515;
+    color: #d9d9d9;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', cursive;
+    color: #ff6666;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+}
+
+/* Links */
+a {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #ff3333;
+    color: #d9d9d9;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ffcc66;
+    text-shadow: 0 0 10px rgba(255, 204, 102, 0.5);
+}
+
+/* Buttons */
+button, input[type="submit"] {
+    background-color: #ff3333;
+    color: #d9d9d9;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Creepster', cursive;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #cc0000;
+}
+
+/* Form Elements */
+input[type="text"], input[type="password"], textarea {
+    background-color: #333333;
+    color: #d9d9d9;
+    border: none;
+    padding: 10px;
+    font-family: 'Creepster', cursive;
+    font-size: 16px;
+}
+
+/* Flash Messages */
+.success {
+    background-color: #006600;
+    color: #d9d9d9;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.danger {
+    background-color: #990000;
+    color: #d9d9d9;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.info {
+    background-color: #003366;
+    color: #d9d9d9;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Listing Images */
+img {
+    max-width: 350px;
+    height: auto;
+    border: 2px solid #ff6666;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center; 
+}
+
+/* Errors */
+.error-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.error-container h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.error-container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.error-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.error-container img {
+    max-width: 400px;
+    border: 3px solid #ff6666;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.error-container a {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #ff3333;
+    color: #d9d9d9;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.error-container a:hover {
+    background-color: #cc0000;
+}
+
+.listings-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto; 
+    align-items: center;
+    padding: 20px;
+}
+
+/* Listing Box */
+.listing-box {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ff6666;
+    border-radius: 5px;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Listing Actions */
+.listing-actions {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.listing-actions a {
+    display: inline-block;
+    background-color: #ff3333;
+    color: #d9d9d9;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.listing-actions a:hover {
+    background-color: #cc0000;
+}

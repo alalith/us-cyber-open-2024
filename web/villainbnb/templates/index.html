@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to VillainBnB</h1>
+    <p>Find the perfect hideout for your villainous needs.</p>
+    {% if current_user.is_authenticated %}
+    <p>Logged in as {{ current_user.username }}</p>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <a href="{{ url_for('create_listing') }}">Create Listing</a>
+    <a href="{{ url_for('user_listings') }}">Your Listings</a>
+    {% else %}
+    <a href="{{ url_for('register') }}">Register</a>
+    <a href="{{ url_for('login') }}">Login</a>
+    {% endif %}
+    <a href="{{ url_for('search') }}">Search Listings</a>
+    <h2>Featured Listing</h2>
+    <div class="listing-box">
+        <h3>{{ listing.name }}</h3>
+        <p>{{ listing.description }}</p>
+        <img src="{{ listing.image_url }}" alt="{{ listing.name }} Image">
+    </div>
+{% endblock %}

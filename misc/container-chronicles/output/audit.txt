@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Mon Jun  3 06:42:06 2024
+Invocation: foremost -i containers.png 
+Output directory: /home/arjun/Documents/ctfs/us-cyber-open/misc/container-chronicles/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: containers.png
+Start: Mon Jun  3 06:42:06 2024
+Length: 740 KB (757850 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.png 	     740 KB 	          0 	  (640 x 480)
+Finish: Mon Jun  3 06:42:06 2024
+
+1 FILES EXTRACTED
+	
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Mon Jun  3 06:42:06 2024

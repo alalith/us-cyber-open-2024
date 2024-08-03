@@ -1,0 +1,391 @@
+Disassembly of <code object emo_func_start at 0x78b999460ab0, file "./runtime.py", line 64>:
+ 64           0 RESUME                   0
+
+ 65           2 LOAD_CONST               0 (None)
+              4 RETURN_VALUE
+
+Disassembly of <code object emo_func_input_byte at 0x78b9994ec810, file "./runtime.py", line 68>:
+ 68           0 RESUME                   0
+
+ 69           2 LOAD_GLOBAL              1 (NULL + ord)
+             14 LOAD_GLOBAL              2 (sys)
+             26 LOAD_ATTR                2 (stdin)
+             36 LOAD_METHOD              3 (read)
+             58 LOAD_CONST               1 (1)
+             60 PRECALL                  1
+             64 CALL                     1
+             74 PRECALL                  1
+             78 CALL                     1
+             88 STORE_FAST               2 (V)
+
+ 70          90 LOAD_FAST                0 (self)
+             92 LOAD_ATTR                4 (STACK)
+            102 LOAD_METHOD              5 (append)
+            124 LOAD_FAST                2 (V)
+            126 PRECALL                  1
+            130 CALL                     1
+            140 POP_TOP
+            142 LOAD_CONST               0 (None)
+            144 RETURN_VALUE
+
+Disassembly of <code object emo_func_push_byte at 0x78b999470bb0, file "./runtime.py", line 73>:
+              0 MAKE_CELL                0 (self)
+              2 MAKE_CELL                1 (I)
+
+ 73           4 RESUME                   0
+
+ 74           6 LOAD_GLOBAL              1 (NULL + int)
+             18 LOAD_CONST               1 ('')
+             20 LOAD_METHOD              1 (join)
+             42 LOAD_CLOSURE             1 (I)
+             44 LOAD_CLOSURE             0 (self)
+             46 BUILD_TUPLE              2
+             48 LOAD_CONST               2 (<code object <listcomp> at 0x78b9994adb60, file "./runtime.py", line 74>)
+             50 MAKE_FUNCTION            8 (closure)
+             52 LOAD_GLOBAL              5 (NULL + range)
+             64 LOAD_CONST               3 (1)
+             66 LOAD_CONST               4 (4)
+             68 PRECALL                  2
+             72 CALL                     2
+             82 GET_ITER
+             84 PRECALL                  0
+             88 CALL                     0
+             98 PRECALL                  1
+            102 CALL                     1
+            112 PRECALL                  1
+            116 CALL                     1
+            126 STORE_FAST               2 (X)
+
+ 75         128 LOAD_DEREF               0 (self)
+            130 LOAD_ATTR                3 (STACK)
+            140 LOAD_METHOD              4 (append)
+            162 LOAD_FAST                2 (X)
+            164 PRECALL                  1
+            168 CALL                     1
+            178 POP_TOP
+            180 LOAD_CONST               0 (None)
+            182 RETURN_VALUE
+
+Disassembly of <code object emo_func_xor_byte at 0x78b999508510, file "./runtime.py", line 78>:
+ 78           0 RESUME                   0
+
+ 79           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (1)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE    81 (to 212)
+
+ 80          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (V1)
+
+ 81         100 LOAD_FAST                0 (self)
+            102 LOAD_ATTR                1 (STACK)
+            112 LOAD_METHOD              2 (pop)
+            134 PRECALL                  0
+            138 CALL                     0
+            148 STORE_FAST               3 (V2)
+
+ 82         150 LOAD_FAST                0 (self)
+            152 LOAD_ATTR                1 (STACK)
+            162 LOAD_METHOD              3 (append)
+            184 LOAD_FAST                2 (V1)
+            186 LOAD_FAST                3 (V2)
+            188 BINARY_OP               12 (^)
+            192 PRECALL                  1
+            196 CALL                     1
+            206 POP_TOP
+            208 LOAD_CONST               0 (None)
+            210 RETURN_VALUE
+
+ 84     >>  212 LOAD_GLOBAL              8 (EmptyStackException)
+            224 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_compare at 0x78b99943d6b0, file "./runtime.py", line 87>:
+ 87           0 RESUME                   0
+
+ 88           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (1)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE   112 (to 274)
+
+ 89          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (V1)
+
+ 90         100 LOAD_FAST                0 (self)
+            102 LOAD_ATTR                1 (STACK)
+            112 LOAD_METHOD              2 (pop)
+            134 PRECALL                  0
+            138 CALL                     0
+            148 STORE_FAST               3 (V2)
+
+ 91         150 LOAD_FAST                2 (V1)
+            152 LOAD_FAST                3 (V2)
+            154 COMPARE_OP               2 (==)
+            160 POP_JUMP_FORWARD_IF_FALSE    28 (to 218)
+
+ 92         162 LOAD_FAST                0 (self)
+            164 LOAD_ATTR                1 (STACK)
+            174 LOAD_METHOD              3 (append)
+            196 LOAD_CONST               1 (1)
+            198 PRECALL                  1
+            202 CALL                     1
+            212 POP_TOP
+            214 LOAD_CONST               0 (None)
+            216 RETURN_VALUE
+
+ 94     >>  218 LOAD_FAST                0 (self)
+            220 LOAD_ATTR                1 (STACK)
+            230 LOAD_METHOD              3 (append)
+            252 LOAD_CONST               2 (0)
+            254 PRECALL                  1
+            258 CALL                     1
+            268 POP_TOP
+            270 LOAD_CONST               0 (None)
+            272 RETURN_VALUE
+
+ 96     >>  274 LOAD_GLOBAL              8 (EmptyStackException)
+            286 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_jump_if at 0x78b99950c2f0, file "./runtime.py", line 99>:
+ 99           0 RESUME                   0
+
+100           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (0)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE    51 (to 152)
+
+101          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (C)
+
+103         100 LOAD_FAST                2 (C)
+            102 LOAD_CONST               2 (1)
+            104 COMPARE_OP               2 (==)
+            110 POP_JUMP_FORWARD_IF_FALSE    18 (to 148)
+
+104         112 LOAD_FAST                0 (self)
+            114 COPY                     1
+            116 LOAD_ATTR                3 (PC)
+            126 LOAD_CONST               2 (1)
+            128 BINARY_OP               13 (+=)
+            132 SWAP                     2
+            134 STORE_ATTR               3 (PC)
+            144 LOAD_CONST               0 (None)
+            146 RETURN_VALUE
+
+103     >>  148 LOAD_CONST               0 (None)
+            150 RETURN_VALUE
+
+106     >>  152 LOAD_GLOBAL              8 (EmptyStackException)
+            164 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_jump_back at 0x78b99950c9d0, file "./runtime.py", line 109>:
+109           0 RESUME                   0
+
+110           2 LOAD_FAST                0 (self)
+              4 LOAD_METHOD              0 (emo_func_push_byte)
+             26 PRECALL                  0
+             30 CALL                     0
+             40 POP_TOP
+
+111          42 LOAD_FAST                0 (self)
+             44 LOAD_ATTR                1 (STACK)
+             54 LOAD_METHOD              2 (pop)
+             76 PRECALL                  0
+             80 CALL                     0
+             90 STORE_FAST               2 (V)
+
+112          92 LOAD_FAST                3 (PC)
+             94 LOAD_FAST                2 (V)
+             96 BINARY_OP               23 (-=)
+            100 STORE_FAST               3 (PC)
+
+113         102 LOAD_GLOBAL              6 (F)
+            114 LOAD_METHOD              4 (seek)
+            136 LOAD_FAST                3 (PC)
+            138 PRECALL                  1
+            142 CALL                     1
+            152 POP_TOP
+            154 LOAD_CONST               0 (None)
+            156 RETURN_VALUE
+
+Disassembly of <code object emo_func_jump_forward at 0x78b99950cf50, file "./runtime.py", line 116>:
+116           0 RESUME                   0
+
+117           2 LOAD_FAST                0 (self)
+              4 LOAD_METHOD              0 (emo_func_push_byte)
+             26 PRECALL                  0
+             30 CALL                     0
+             40 POP_TOP
+
+118          42 LOAD_FAST                0 (self)
+             44 LOAD_ATTR                1 (STACK)
+             54 LOAD_METHOD              2 (pop)
+             76 PRECALL                  0
+             80 CALL                     0
+             90 STORE_FAST               2 (V)
+
+119          92 LOAD_FAST                3 (PC)
+             94 LOAD_FAST                2 (V)
+             96 BINARY_OP               13 (+=)
+            100 STORE_FAST               3 (PC)
+
+120         102 LOAD_GLOBAL              6 (F)
+            114 LOAD_METHOD              4 (seek)
+            136 LOAD_FAST                3 (PC)
+            138 PRECALL                  1
+            142 CALL                     1
+            152 POP_TOP
+            154 LOAD_CONST               0 (None)
+            156 RETURN_VALUE
+
+Disassembly of <code object emo_func_subtract at 0x78b999508850, file "./runtime.py", line 123>:
+123           0 RESUME                   0
+
+124           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (1)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE    81 (to 212)
+
+125          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (V1)
+
+126         100 LOAD_FAST                0 (self)
+            102 LOAD_ATTR                1 (STACK)
+            112 LOAD_METHOD              2 (pop)
+            134 PRECALL                  0
+            138 CALL                     0
+            148 STORE_FAST               3 (V2)
+
+127         150 LOAD_FAST                0 (self)
+            152 LOAD_ATTR                1 (STACK)
+            162 LOAD_METHOD              3 (append)
+            184 LOAD_FAST                2 (V1)
+            186 LOAD_FAST                3 (V2)
+            188 BINARY_OP               10 (-)
+            192 PRECALL                  1
+            196 CALL                     1
+            206 POP_TOP
+            208 LOAD_CONST               0 (None)
+            210 RETURN_VALUE
+
+129     >>  212 LOAD_GLOBAL              8 (EmptyStackException)
+            224 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_add at 0x78b999509070, file "./runtime.py", line 132>:
+132           0 RESUME                   0
+
+133           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (1)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE    81 (to 212)
+
+134          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (V1)
+
+135         100 LOAD_FAST                0 (self)
+            102 LOAD_ATTR                1 (STACK)
+            112 LOAD_METHOD              2 (pop)
+            134 PRECALL                  0
+            138 CALL                     0
+            148 STORE_FAST               3 (V2)
+
+136         150 LOAD_FAST                0 (self)
+            152 LOAD_ATTR                1 (STACK)
+            162 LOAD_METHOD              3 (append)
+            184 LOAD_FAST                2 (V1)
+            186 LOAD_FAST                3 (V2)
+            188 BINARY_OP                0 (+)
+            192 PRECALL                  1
+            196 CALL                     1
+            206 POP_TOP
+            208 LOAD_CONST               0 (None)
+            210 RETURN_VALUE
+
+138     >>  212 LOAD_GLOBAL              8 (EmptyStackException)
+            224 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_output_byte at 0x78b998d35de0, file "./runtime.py", line 141>:
+141           0 RESUME                   0
+
+142           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (0)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE    71 (to 192)
+
+143          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (V)
+
+144         100 LOAD_GLOBAL              6 (sys)
+            112 LOAD_ATTR                4 (stdout)
+            122 LOAD_METHOD              5 (write)
+            144 LOAD_GLOBAL             13 (NULL + chr)
+            156 LOAD_FAST                2 (V)
+            158 PRECALL                  1
+            162 CALL                     1
+            172 PRECALL                  1
+            176 CALL                     1
+            186 POP_TOP
+            188 LOAD_CONST               0 (None)
+            190 RETURN_VALUE
+
+146     >>  192 LOAD_GLOBAL             14 (EmptyStackException)
+            204 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_exit at 0x78b9994aec40, file "./runtime.py", line 149>:
+149           0 RESUME                   0
+
+150           2 LOAD_GLOBAL              1 (NULL + sys)
+             14 LOAD_ATTR                1 (exit)
+             24 LOAD_CONST               1 (0)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 POP_TOP
+             42 LOAD_CONST               0 (None)
+             44 RETURN_VALUE

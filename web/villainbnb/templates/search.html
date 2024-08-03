@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Search Listings</h1>
+    <a href="{{ url_for('index') }}">Return to Home</a>
+    <form>
+        <label for="url">Search All Listings: </label>
+        <input type="text" name="query" value="{{ search_query or '' }}" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+    <h2>Featured Listings</h2>
+    <div class=""listing-container">
+        {% if listings %}
+         {% for listing in listings %}
+            <div class="listing-box">
+            <h3>{{ listing.name }}</h3>
+            <p>{{ listing.description }}</p>
+            <img src="{{ listing.image_url }}" alt="{{ listing.name }} Image">
+            </div>
+         {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

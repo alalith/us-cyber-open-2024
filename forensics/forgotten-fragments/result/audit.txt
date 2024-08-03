@@ -1,0 +1,33 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Jun  2 14:54:33 2024
+Invocation: foremost -o result/ -t zip -i memdumpctf.elf 
+Output directory: /home/arjun/Documents/ctfs/us-cyber-open/forensics/forgotten-fragments/result
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: memdumpctf.elf
+Start: Sun Jun  2 14:54:33 2024
+Length: 3 GB (3489545240 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00422137.zip 	      63 MB 	  216134532 	 
+1:	01903220.zip 	      182 B 	  974448649 	 
+2:	02482502.zip 	      86 MB 	 1271041268 	 
+3:	03411406.zip 	     544 KB 	 1746640023 	 
+4:	04166374.zip 	       2 KB 	 2133183966 	 
+5:	04483736.zip 	      65 MB 	 2295673084 	 
+6:	05162302.zip 	       2 KB 	 2643099102 	 
+7:	05423372.zip 	      46 MB 	 2776766484 	 
+8:	05547721.zip 	      85 MB 	 2840433442 	 
+9:	05741121.zip 	      50 MB 	 2939454174 	 
+10:	06359046.zip 	      37 MB 	 3255832028 	 
+Finish: Sun Jun  2 14:54:37 2024
+
+11 FILES EXTRACTED
+	
+zip:= 11
+------------------------------------------------------------------
+
+Foremost finished at Sun Jun  2 14:54:37 2024

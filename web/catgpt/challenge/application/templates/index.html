@@ -1,0 +1,22 @@
+{% extends 'template.html' %}
+{% block content %}
+<div id="image_container" class="p-2"><img src="/static/assets/img/catgpt.png" id="img" width="100%"/></div>
+<div class="progress">
+    <div class="progress-bar" role="progressbar" id="cat" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50% Cat</div>
+    <div class="progress-bar bg-success" role="progressbar" id="dog" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50% Dog</div>
+    </div>
+<div class="p-2">
+    <em>Our trained AI model is able to (somewhat) accurately predict if the image you uploaded is a cat or a dog! Try it out below!</em>
+</div>
+<div class="p-2">
+    <form id="image_form">
+        <input type="file" name="image" id="image_input" accept=".jpg,.png"/>
+        <input type="submit" value="Submit" id="submit_button"/>
+    </form>
+</div>
+<div style="text-align:center;"><a href="/contribute" style="color:#999; font-size:0.8em">Contribute</a></div>
+{% endblock %}
+{% block scripts %}
+<script src="/static/assets/js/main.js"></script>
+{% endblock %}
+

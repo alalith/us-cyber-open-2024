@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Listings{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Your Listings</h1>
+    <a href="{{ url_for('index') }}">Return to Home</a>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="{{ category }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+    <div class="listing-box">
+        {% for listing in listings %}
+            <h3>{{ listing.name }}</h3>
+            <p>{{ listing.description }}</p>
+            <img src="{{ listing.image_url }}" alt="{{ listing.name }} Image">
+            <br>
+            <a href="{{ url_for('update_listing', listing_id=listing.id) }}">Update</a>
+        </li>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

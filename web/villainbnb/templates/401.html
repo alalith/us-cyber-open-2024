@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Unauthorized{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <h1>Error 401</h1>
+    <h2>Unauthorized Access</h2>
+    <p>You are not authorized to access this area. Only villains with the proper credentials are allowed to proceed.</p>
+    <img src="{{ url_for('static', filename='images/unauthorized.png') }}" alt="Unauthorized Access">
+    <a href="{{ url_for('index') }}">Return to Home</a>
+</div>
+{% endblock %}

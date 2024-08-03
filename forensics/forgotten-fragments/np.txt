@@ -1,0 +1,314 @@
+MUI	GLOBALACC
+MAINACC	SLIPUPACC
+en-US
+&File
+&New	Ctrl+N
+New &Window	Ctrl+Shift+N
+&Open...	Ctrl+O
+&Save	Ctrl+S
+Save &As...	Ctrl+Shift+S
+Page Set&up...
+&Print...	Ctrl+P
+E&xit
+&Edit
+&Undo	Ctrl+Z
+Cu&t	Ctrl+X
+&Copy	Ctrl+C
+&Paste	Ctrl+V
+De&lete	Del
+&Search with Bing...	Ctrl+E
+&Find...	Ctrl+F
+Find &Next	F3
+Find Pre&vious	Shift+F3
+&Replace...	Ctrl+H
+&Go To...	Ctrl+G
+Select &All	Ctrl+A
+Time/&Date	F5
+F&ormat
+ &Word Wrap
+!&Font...
+&View
+&Zoom
+"Zoom &In	Ctrl+Plus
+#Zoom &Out	Ctrl+Minus
+$&Restore Default Zoom	Ctrl+0
+&Status Bar
+&Help
+@View &Help
+BSend &Feedback
+A&About Notepad
+Notepad
+MS Shell Dlg
+Cancel
+Now Printing
+Page Setup
+MS Shell Dlg
+Paper
+Si&ze:
+&Source:
+Orientation
+P&ortrait
+L&andscape
+Margins
+&Left:
+&Right:
+&Top:
+&Bottom:
+&Header:
+&Footer:
+SysLink
+<A>Input Values</A>
+Cancel
+&Printer...
+Preview
+Go To Line
+MS Shell Dlg
+&Line number:
+Go To
+Cancel
+MS Shell Dlg
+&Encoding:
+ICannot open the %% file.
+Make sure a disk is in the drive you specified.;Cannot find the %% file.
+Do you want to create a new file?FThe text in the %% file has changed.
+Do you want to save the changes?
+Untitled
+%1%2 - Notepad
+Cannot find "%%"
+Not enough memory available to complete this operation. Quit one or more applications to increase available memory, and then try again.KThe %% file is too large for Notepad.
+Use another editor to edit the file.
+NotepadFFailed to initialize file dialogs. Change the file name and try again.
+Failed to initialize print dialogs. Make sure that your printer is connected properly and use Control Panel to verify that the printer is configured properly.
+Cannot print the %% file. Be sure that your printer is connected properly and use Control Panel to verify that the printer is configured properly.
+Not a valid file name.NCannot create the %% file.
+Make sure that the path and file name are correct.RCannot carry out the Word Wrap command because there is too much text in the file.
+notepad.hlp
+Page &p
+Text Documents (*.txt)
+All Files 
+Open
+Save As
+You cannot shut down or log off Windows because
+the Save As dialog box in Notepad is open. Switch to
+Notepad, close this dialog box, and then try shutting
+down or logging off Windows again.
+Cannot access your printer.
+Be sure that your printer is connected properly and use Control Panel to verify that the printer is configured properly.u%%
+You do not have permission to open this file.  See the owner of the file or an administrator to obtain permission.
+ This file contains characters in Unicode format which will be lost if you save this file as an ANSI encoded text file. To keep the Unicode information, click Cancel below and then select one of the Unicode options from the Encoding drop down list. Continue?BPage too small to print one line.
+Try printing using smaller font.
+Common Dialog error (0x%04x)
+Notepad - Goto Line3The line number is beyond the total number of lines
+ANSI	UTF-16 LE	UTF-16 BE
+UTF-8
+Page %d
+ Ln %d, Col %d
+ Compressed,
+ Encrypted,
+ Hidden,	 Offline,
+ ReadOnly,
+ System,
+ File
+fFpPtTdDcCrRlL
+&Encoding:rNotepad was running in a transaction which has completed.
+Would you like to save the %% file non-transactionally?
+We can
+t open this file [Either your organization doesn
+t allow it, or there
+s a problem with the file
+s encryption.
+Text Editor
+ Windows (CRLF)
+ Unix (LF)
+ Macintosh (CR)
+ Found next from the bottom
+ Found next from the top
+ %d%%
+Auto-Detect
+UTF-8 with BOM
+Status Bar
+Text Document
+New Text Document
+Notepad"Do you want to save changes to %1?
+&Save
+Do&n't Save
+VS_VERSION_INFO
+StringFileInfo
+040904B0
+CompanyName
+Microsoft Corporation
+FileDescription
+Notepad
+FileVersion
+10.0.19041.1 (WinBuild.160101.0800)
+InternalName
+Notepad
+LegalCopyright
+ Microsoft Corporation. All rights reserved.
+OriginalFilename
+NOTEPAD.EXE.MUI
+ProductName
+Microsoft
+ Windows
+ Operating System
+ProductVersion
+10.0.19041.1
+VarFileInfo
+Translation
+MUI	GLOBALACC
+MAINACC	SLIPUPACC
+en-US
+&File
+&New	Ctrl+N
+New &Window	Ctrl+Shift+N
+&Open...	Ctrl+O
+&Save	Ctrl+S
+Save &As...	Ctrl+Shift+S
+Page Set&up...
+&Print...	Ctrl+P
+E&xit
+&Edit
+&Undo	Ctrl+Z
+Cu&t	Ctrl+X
+&Copy	Ctrl+C
+&Paste	Ctrl+V
+De&lete	Del
+&Search with Bing...	Ctrl+E
+&Find...	Ctrl+F
+Find &Next	F3
+Find Pre&vious	Shift+F3
+&Replace...	Ctrl+H
+&Go To...	Ctrl+G
+Select &All	Ctrl+A
+Time/&Date	F5
+F&ormat
+ &Word Wrap
+!&Font...
+&View
+&Zoom
+"Zoom &In	Ctrl+Plus
+#Zoom &Out	Ctrl+Minus
+$&Restore Default Zoom	Ctrl+0
+&Status Bar
+&Help
+@View &Help
+BSend &Feedback
+A&About Notepad
+Notepad
+MS Shell Dlg
+Cancel
+Now Printing
+Page Setup
+MS Shell Dlg
+Paper
+Si&ze:
+&Source:
+Orientation
+P&ortrait
+L&andscape
+Margins
+&Left:
+&Right:
+&Top:
+&Bottom:
+&Header:
+&Footer:
+SysLink
+<A>Input Values</A>
+Cancel
+&Printer...
+Preview
+Go To Line
+MS Shell Dlg
+&Line number:
+Go To
+Cancel
+MS Shell Dlg
+&Encoding:
+ICannot open the %% file.
+Make sure a disk is in the drive you specified.;Cannot find the %% file.
+Do you want to create a new file?FThe text in the %% file has changed.
+Do you want to save the changes?
+Untitled
+%1%2 - Notepad
+Cannot find "%%"
+Not enough memory available to complete this operation. Quit one or more applications to increase available memory, and then try again.KThe %% file is too large for Notepad.
+Use another editor to edit the file.
+NotepadFFailed to initialize file dialogs. Change the file name and try again.
+Failed to initialize print dialogs. Make sure that your printer is connected properly and use Control Panel to verify that the printer is configured properly.
+Cannot print the %% file. Be sure that your printer is connected properly and use Control Panel to verify that the printer is configured properly.
+Not a valid file name.NCannot create the %% file.
+Make sure that the path and file name are correct.RCannot carry out the Word Wrap command because there is too much text in the file.
+notepad.hlp
+Page &p
+Text Documents (*.txt)
+All Files 
+Open
+Save As
+You cannot shut down or log off Windows because
+the Save As dialog box in Notepad is open. Switch to
+Notepad, close this dialog box, and then try shutting
+down or logging off Windows again.
+Cannot access your printer.
+Be sure that your printer is connected properly and use Control Panel to verify that the printer is configured properly.u%%
+You do not have permission to open this file.  See the owner of the file or an administrator to obtain permission.
+ This file contains characters in Unicode format which will be lost if you save this file as an ANSI encoded text file. To keep the Unicode information, click Cancel below and then select one of the Unicode options from the Encoding drop down list. Continue?BPage too small to print one line.
+Try printing using smaller font.
+Common Dialog error (0x%04x)
+Notepad - Goto Line3The line number is beyond the total number of lines
+ANSI	UTF-16 LE	UTF-16 BE
+UTF-8
+Page %d
+ Ln %d, Col %d
+ Compressed,
+ Encrypted,
+ Hidden,	 Offline,
+ ReadOnly,
+ System,
+ File
+fFpPtTdDcCrRlL
+&Encoding:rNotepad was running in a transaction which has completed.
+Would you like to save the %% file non-transactionally?
+We can
+t open this file [Either your organization doesn
+t allow it, or there
+s a problem with the file
+s encryption.
+Text Editor
+ Windows (CRLF)
+ Unix (LF)
+ Macintosh (CR)
+ Found next from the bottom
+ Found next from the top
+ %d%%
+Auto-Detect
+UTF-8 with BOM
+Status Bar
+Text Document
+New Text Document
+Notepad"Do you want to save changes to %1?
+&Save
+Do&n't Save
+VS_VERSION_INFO
+StringFileInfo
+040904B0
+CompanyName
+Microsoft Corporation
+FileDescription
+Notepad
+FileVersion
+10.0.19041.1 (WinBuild.160101.0800)
+InternalName
+Notepad
+LegalCopyright
+ Microsoft Corporation. All rights reserved.
+OriginalFilename
+NOTEPAD.EXE.MUI
+ProductName
+Microsoft
+ Windows
+ Operating System
+ProductVersion
+10.0.19041.1
+VarFileInfo
+Translation

@@ -1,0 +1,28 @@
+version: "2"
+services:
+  flask:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    depends_on:
+      - redis
+    ports:
+      - "1337:80"
+    environment:
+      REDIS_HOST: 10.0.0.5
+      FLAG: SIVUSCG{t3st_fl4g}
+    networks:
+      challenge:
+        ipv4_address: 10.0.0.6
+  redis:
+    image: redis:latest
+    networks:
+      challenge:
+        ipv4_address: 10.0.0.5
+networks:
+  challenge:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.0.0.0/24
+         gateway: 10.0.0.1

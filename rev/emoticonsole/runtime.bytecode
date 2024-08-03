@@ -1,0 +1,868 @@
+  0           0 RESUME                   0
+
+  1           2 LOAD_CONST               0 (0)
+              4 LOAD_CONST               1 (None)
+              6 IMPORT_NAME              0 (sys)
+              8 STORE_NAME               0 (sys)
+
+  3          10 PUSH_NULL
+             12 LOAD_BUILD_CLASS
+             14 LOAD_CONST               2 (<code object EmptyStackException at 0x78b999524100, file "./runtime.py", line 3>)
+             16 MAKE_FUNCTION            0
+             18 LOAD_CONST               3 ('EmptyStackException')
+             20 LOAD_NAME                1 (Exception)
+             22 PRECALL                  3
+             26 CALL                     3
+             36 STORE_NAME               2 (EmptyStackException)
+
+  7          38 PUSH_NULL
+             40 LOAD_BUILD_CLASS
+             42 LOAD_CONST               4 (<code object InvalidInstructionException at 0x78b999525620, file "./runtime.py", line 7>)
+             44 MAKE_FUNCTION            0
+             46 LOAD_CONST               5 ('InvalidInstructionException')
+             48 LOAD_NAME                1 (Exception)
+             50 PRECALL                  3
+             54 CALL                     3
+             64 STORE_NAME               3 (InvalidInstructionException)
+
+ 11          66 PUSH_NULL
+             68 LOAD_BUILD_CLASS
+             70 LOAD_CONST               6 (<code object EmoProgram at 0x78b999490ed0, file "./runtime.py", line 11>)
+             72 MAKE_FUNCTION            0
+             74 LOAD_CONST               7 ('EmoProgram')
+             76 PRECALL                  2
+             80 CALL                     2
+             90 STORE_NAME               4 (EmoProgram)
+
+166          92 LOAD_NAME                5 (__name__)
+             94 LOAD_CONST               8 ('__main__')
+             96 COMPARE_OP               2 (==)
+            102 POP_JUMP_FORWARD_IF_FALSE   145 (to 394)
+
+168         104 PUSH_NULL
+            106 LOAD_NAME                6 (len)
+            108 LOAD_NAME                0 (sys)
+            110 LOAD_ATTR                7 (argv)
+            120 PRECALL                  1
+            124 CALL                     1
+            134 LOAD_CONST               9 (1)
+            136 COMPARE_OP               2 (==)
+            142 POP_JUMP_FORWARD_IF_FALSE    27 (to 198)
+
+169         144 PUSH_NULL
+            146 LOAD_NAME                8 (print)
+            148 LOAD_CONST              10 ('Usage: ./runtime input_file.emo')
+            150 PRECALL                  1
+            154 CALL                     1
+            164 POP_TOP
+
+170         166 PUSH_NULL
+            168 LOAD_NAME                0 (sys)
+            170 LOAD_ATTR                9 (exit)
+            180 LOAD_CONST               9 (1)
+            182 PRECALL                  1
+            186 CALL                     1
+            196 POP_TOP
+
+172     >>  198 NOP
+
+173         200 PUSH_NULL
+            202 LOAD_NAME               10 (open)
+            204 LOAD_NAME                0 (sys)
+            206 LOAD_ATTR                7 (argv)
+            216 LOAD_CONST               9 (1)
+            218 BINARY_SUBSCR
+            228 LOAD_CONST              11 ('r')
+            230 PRECALL                  2
+            234 CALL                     2
+            244 LOAD_METHOD             11 (read)
+            266 PRECALL                  0
+            270 CALL                     0
+            280 STORE_NAME              12 (F)
+
+174         282 PUSH_NULL
+            284 LOAD_NAME                4 (EmoProgram)
+            286 LOAD_NAME               12 (F)
+            288 PRECALL                  1
+            292 CALL                     1
+            302 STORE_NAME              13 (program)
+
+175         304 LOAD_NAME               13 (program)
+            306 LOAD_METHOD             14 (run_program)
+            328 PRECALL                  0
+            332 CALL                     0
+            342 POP_TOP
+            344 LOAD_CONST               1 (None)
+            346 RETURN_VALUE
+        >>  348 PUSH_EXC_INFO
+
+177         350 LOAD_NAME               15 (FileNotFoundError)
+            352 CHECK_EXC_MATCH
+            354 POP_JUMP_FORWARD_IF_FALSE    15 (to 386)
+            356 POP_TOP
+
+178         358 PUSH_NULL
+            360 LOAD_NAME                8 (print)
+            362 LOAD_CONST              12 ('Unable to open input file.')
+            364 PRECALL                  1
+            368 CALL                     1
+            378 POP_TOP
+            380 POP_EXCEPT
+            382 LOAD_CONST               1 (None)
+            384 RETURN_VALUE
+
+177     >>  386 RERAISE                  0
+        >>  388 COPY                     3
+            390 POP_EXCEPT
+            392 RERAISE                  1
+
+166     >>  394 LOAD_CONST               1 (None)
+            396 RETURN_VALUE
+ExceptionTable:
+  200 to 342 -> 348 [0]
+  348 to 378 -> 388 [1] lasti
+  386 to 386 -> 388 [1] lasti
+
+Disassembly of <code object EmptyStackException at 0x78b999524100, file "./runtime.py", line 3>:
+  3           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('EmptyStackException')
+              8 STORE_NAME               2 (__qualname__)
+
+  4          10 LOAD_CONST               1 ('Raised when the program tries to pop an empty stack')
+             12 STORE_NAME               3 (__doc__)
+
+  5          14 LOAD_CONST               2 (None)
+             16 RETURN_VALUE
+
+Disassembly of <code object InvalidInstructionException at 0x78b999525620, file "./runtime.py", line 7>:
+  7           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('InvalidInstructionException')
+              8 STORE_NAME               2 (__qualname__)
+
+  8          10 LOAD_CONST               1 ('Raised when the program encounters an invalid emoji')
+             12 STORE_NAME               3 (__doc__)
+
+  9          14 LOAD_CONST               2 (None)
+             16 RETURN_VALUE
+
+Disassembly of <code object EmoProgram at 0x78b999490ed0, file "./runtime.py", line 11>:
+ 11           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('EmoProgram')
+              8 STORE_NAME               2 (__qualname__)
+
+ 13          10 LOAD_CONST               1 (<code object __init__ at 0x5f68602be3c0, file "./runtime.py", line 13>)
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               3 (__init__)
+
+ 64          16 LOAD_CONST               2 (<code object emo_func_start at 0x78b999460ab0, file "./runtime.py", line 64>)
+             18 MAKE_FUNCTION            0
+             20 STORE_NAME               4 (emo_func_start)
+
+ 68          22 LOAD_CONST               3 (<code object emo_func_input_byte at 0x78b9994ec810, file "./runtime.py", line 68>)
+             24 MAKE_FUNCTION            0
+             26 STORE_NAME               5 (emo_func_input_byte)
+
+ 73          28 LOAD_CONST               4 (<code object emo_func_push_byte at 0x78b999470bb0, file "./runtime.py", line 73>)
+             30 MAKE_FUNCTION            0
+             32 STORE_NAME               6 (emo_func_push_byte)
+
+ 78          34 LOAD_CONST               5 (<code object emo_func_xor_byte at 0x78b999508510, file "./runtime.py", line 78>)
+             36 MAKE_FUNCTION            0
+             38 STORE_NAME               7 (emo_func_xor_byte)
+
+ 87          40 LOAD_CONST               6 (<code object emo_func_compare at 0x78b99943d6b0, file "./runtime.py", line 87>)
+             42 MAKE_FUNCTION            0
+             44 STORE_NAME               8 (emo_func_compare)
+
+ 99          46 LOAD_CONST               7 (<code object emo_func_jump_if at 0x78b99950c2f0, file "./runtime.py", line 99>)
+             48 MAKE_FUNCTION            0
+             50 STORE_NAME               9 (emo_func_jump_if)
+
+109          52 LOAD_CONST               8 (<code object emo_func_jump_back at 0x78b99950c9d0, file "./runtime.py", line 109>)
+             54 MAKE_FUNCTION            0
+             56 STORE_NAME              10 (emo_func_jump_back)
+
+116          58 LOAD_CONST               9 (<code object emo_func_jump_forward at 0x78b99950cf50, file "./runtime.py", line 116>)
+             60 MAKE_FUNCTION            0
+             62 STORE_NAME              11 (emo_func_jump_forward)
+
+123          64 LOAD_CONST              10 (<code object emo_func_subtract at 0x78b999508850, file "./runtime.py", line 123>)
+             66 MAKE_FUNCTION            0
+             68 STORE_NAME              12 (emo_func_subtract)
+
+132          70 LOAD_CONST              11 (<code object emo_func_add at 0x78b999509070, file "./runtime.py", line 132>)
+             72 MAKE_FUNCTION            0
+             74 STORE_NAME              13 (emo_func_add)
+
+141          76 LOAD_CONST              12 (<code object emo_func_output_byte at 0x78b998d35de0, file "./runtime.py", line 141>)
+             78 MAKE_FUNCTION            0
+             80 STORE_NAME              14 (emo_func_output_byte)
+
+149          82 LOAD_CONST              13 (<code object emo_func_exit at 0x78b9994aec40, file "./runtime.py", line 149>)
+             84 MAKE_FUNCTION            0
+             86 STORE_NAME              15 (emo_func_exit)
+
+152          88 LOAD_CONST              14 (<code object run_program at 0x78b99943d890, file "./runtime.py", line 152>)
+             90 MAKE_FUNCTION            0
+             92 STORE_NAME              16 (run_program)
+             94 LOAD_CONST              15 (None)
+             96 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x5f68602be3c0, file "./runtime.py", line 13>:
+ 13           0 RESUME                   0
+
+ 16           2 BUILD_LIST               0
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (P)
+
+ 18          16 LOAD_CONST               1 (0)
+             18 STORE_FAST               2 (i)
+
+ 19          20 LOAD_FAST                2 (i)
+             22 LOAD_GLOBAL              3 (NULL + len)
+             34 LOAD_FAST                1 (F)
+             36 PRECALL                  1
+             40 CALL                     1
+             50 COMPARE_OP               0 (<)
+             56 POP_JUMP_FORWARD_IF_FALSE   162 (to 382)
+
+ 20     >>   58 LOAD_FAST                1 (F)
+             60 LOAD_FAST                2 (i)
+             62 BINARY_SUBSCR
+             72 STORE_FAST               3 (I)
+
+ 21          74 LOAD_FAST                3 (I)
+             76 LOAD_CONST               2 ('🔼')
+             78 COMPARE_OP               2 (==)
+             84 POP_JUMP_FORWARD_IF_FALSE    43 (to 172)
+
+ 22          86 LOAD_FAST                0 (self)
+             88 LOAD_ATTR                0 (P)
+             98 LOAD_METHOD              2 (append)
+            120 LOAD_FAST                1 (F)
+            122 LOAD_FAST                2 (i)
+            124 LOAD_FAST                2 (i)
+            126 LOAD_CONST               3 (4)
+            128 BINARY_OP                0 (+)
+            132 BUILD_SLICE              2
+            134 BINARY_SUBSCR
+            144 PRECALL                  1
+            148 CALL                     1
+            158 POP_TOP
+
+ 23         160 LOAD_FAST                2 (i)
+            162 LOAD_CONST               3 (4)
+            164 BINARY_OP               13 (+=)
+            168 STORE_FAST               2 (i)
+            170 JUMP_FORWARD            86 (to 344)
+
+ 24     >>  172 LOAD_FAST                3 (I)
+            174 LOAD_CONST               4 ('🔄')
+            176 COMPARE_OP               2 (==)
+            182 POP_JUMP_FORWARD_IF_TRUE     6 (to 196)
+            184 LOAD_FAST                3 (I)
+            186 LOAD_CONST               5 ('🔁')
+            188 COMPARE_OP               2 (==)
+            194 POP_JUMP_FORWARD_IF_FALSE    43 (to 282)
+
+ 25     >>  196 LOAD_FAST                0 (self)
+            198 LOAD_ATTR                0 (P)
+            208 LOAD_METHOD              2 (append)
+            230 LOAD_FAST                1 (F)
+            232 LOAD_FAST                2 (i)
+            234 LOAD_FAST                2 (i)
+            236 LOAD_CONST               3 (4)
+            238 BINARY_OP                0 (+)
+            242 BUILD_SLICE              2
+            244 BINARY_SUBSCR
+            254 PRECALL                  1
+            258 CALL                     1
+            268 POP_TOP
+
+ 26         270 LOAD_FAST                2 (i)
+            272 LOAD_CONST               3 (4)
+            274 BINARY_OP               13 (+=)
+            278 STORE_FAST               2 (i)
+            280 JUMP_FORWARD            31 (to 344)
+
+ 28     >>  282 LOAD_FAST                0 (self)
+            284 LOAD_ATTR                0 (P)
+            294 LOAD_METHOD              2 (append)
+            316 LOAD_FAST                3 (I)
+            318 PRECALL                  1
+            322 CALL                     1
+            332 POP_TOP
+
+ 29         334 LOAD_FAST                2 (i)
+            336 LOAD_CONST               6 (1)
+            338 BINARY_OP               13 (+=)
+            342 STORE_FAST               2 (i)
+
+ 19     >>  344 LOAD_FAST                2 (i)
+            346 LOAD_GLOBAL              3 (NULL + len)
+            358 LOAD_FAST                1 (F)
+            360 PRECALL                  1
+            364 CALL                     1
+            374 COMPARE_OP               0 (<)
+            380 POP_JUMP_BACKWARD_IF_TRUE   162 (to 58)
+
+ 32     >>  382 BUILD_LIST               0
+            384 LOAD_FAST                0 (self)
+            386 STORE_ATTR               3 (STACK)
+
+ 35         396 LOAD_CONST               1 (0)
+            398 LOAD_FAST                0 (self)
+            400 STORE_ATTR               4 (PC)
+
+ 37         410 LOAD_CONST               7 ('0')
+
+ 38         412 LOAD_CONST               8 ('1')
+
+ 39         414 LOAD_CONST               9 ('2')
+
+ 40         416 LOAD_CONST              10 ('3')
+
+ 41         418 LOAD_CONST              11 ('4')
+
+ 42         420 LOAD_CONST              12 ('5')
+
+ 43         422 LOAD_CONST              13 ('6')
+
+ 44         424 LOAD_CONST              14 ('7')
+
+ 45         426 LOAD_CONST              15 ('8')
+
+ 46         428 LOAD_CONST              16 ('9')
+
+ 37         430 LOAD_CONST              17 (('⓿', '⓵', '⓶', '⓷', '⓸', '⓹', '⓺', '⓻', '⓼', '⓽'))
+            432 BUILD_CONST_KEY_MAP     10
+            434 LOAD_FAST                0 (self)
+            436 STORE_ATTR               5 (NUMS)
+
+ 49         446 LOAD_FAST                0 (self)
+            448 LOAD_ATTR                6 (emo_func_start)
+
+ 50         458 LOAD_FAST                0 (self)
+            460 LOAD_ATTR                7 (emo_func_input_byte)
+
+ 51         470 LOAD_FAST                0 (self)
+            472 LOAD_ATTR                8 (emo_func_push_byte)
+
+ 52         482 LOAD_FAST                0 (self)
+            484 LOAD_ATTR                9 (emo_func_xor_byte)
+
+ 53         494 LOAD_FAST                0 (self)
+            496 LOAD_ATTR               10 (emo_func_jump_if)
+
+ 54         506 LOAD_FAST                0 (self)
+            508 LOAD_ATTR               11 (emo_func_compare)
+
+ 55         518 LOAD_FAST                0 (self)
+            520 LOAD_ATTR               12 (emo_func_jump_back)
+
+ 56         530 LOAD_FAST                0 (self)
+            532 LOAD_ATTR               13 (emo_func_jump_forward)
+
+ 57         542 LOAD_FAST                0 (self)
+            544 LOAD_ATTR               14 (emo_func_subtract)
+
+ 58         554 LOAD_FAST                0 (self)
+            556 LOAD_ATTR               15 (emo_func_add)
+
+ 59         566 LOAD_FAST                0 (self)
+            568 LOAD_ATTR               16 (emo_func_output_byte)
+
+ 60         578 LOAD_FAST                0 (self)
+            580 LOAD_ATTR               17 (emo_func_exit)
+
+ 48         590 LOAD_CONST              18 (('🌞', '📥', '🔼', '⊕', '❔', '🟰', '🔄', '🔁', '➖', '➕', '🔊', '🌛'))
+            592 BUILD_CONST_KEY_MAP     12
+            594 LOAD_FAST                0 (self)
+            596 STORE_ATTR              18 (EMO)
+            606 LOAD_CONST               0 (None)
+            608 RETURN_VALUE
+
+Disassembly of <code object emo_func_start at 0x78b999460ab0, file "./runtime.py", line 64>:
+ 64           0 RESUME                   0
+
+ 65           2 LOAD_CONST               0 (None)
+              4 RETURN_VALUE
+
+Disassembly of <code object emo_func_input_byte at 0x78b9994ec810, file "./runtime.py", line 68>:
+ 68           0 RESUME                   0
+
+ 69           2 LOAD_GLOBAL              1 (NULL + ord)
+             14 LOAD_GLOBAL              2 (sys)
+             26 LOAD_ATTR                2 (stdin)
+             36 LOAD_METHOD              3 (read)
+             58 LOAD_CONST               1 (1)
+             60 PRECALL                  1
+             64 CALL                     1
+             74 PRECALL                  1
+             78 CALL                     1
+             88 STORE_FAST               2 (V)
+
+ 70          90 LOAD_FAST                0 (self)
+             92 LOAD_ATTR                4 (STACK)
+            102 LOAD_METHOD              5 (append)
+            124 LOAD_FAST                2 (V)
+            126 PRECALL                  1
+            130 CALL                     1
+            140 POP_TOP
+            142 LOAD_CONST               0 (None)
+            144 RETURN_VALUE
+
+Disassembly of <code object emo_func_push_byte at 0x78b999470bb0, file "./runtime.py", line 73>:
+              0 MAKE_CELL                0 (self)
+              2 MAKE_CELL                1 (I)
+
+ 73           4 RESUME                   0
+
+ 74           6 LOAD_GLOBAL              1 (NULL + int)
+             18 LOAD_CONST               1 ('')
+             20 LOAD_METHOD              1 (join)
+             42 LOAD_CLOSURE             1 (I)
+             44 LOAD_CLOSURE             0 (self)
+             46 BUILD_TUPLE              2
+             48 LOAD_CONST               2 (<code object <listcomp> at 0x78b9994adb60, file "./runtime.py", line 74>)
+             50 MAKE_FUNCTION            8 (closure)
+             52 LOAD_GLOBAL              5 (NULL + range)
+             64 LOAD_CONST               3 (1)
+             66 LOAD_CONST               4 (4)
+             68 PRECALL                  2
+             72 CALL                     2
+             82 GET_ITER
+             84 PRECALL                  0
+             88 CALL                     0
+             98 PRECALL                  1
+            102 CALL                     1
+            112 PRECALL                  1
+            116 CALL                     1
+            126 STORE_FAST               2 (X)
+
+ 75         128 LOAD_DEREF               0 (self)
+            130 LOAD_ATTR                3 (STACK)
+            140 LOAD_METHOD              4 (append)
+            162 LOAD_FAST                2 (X)
+            164 PRECALL                  1
+            168 CALL                     1
+            178 POP_TOP
+            180 LOAD_CONST               0 (None)
+            182 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x78b9994adb60, file "./runtime.py", line 74>:
+              0 COPY_FREE_VARS           2
+
+ 74           2 RESUME                   0
+              4 BUILD_LIST               0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                21 (to 52)
+             10 STORE_FAST               1 (i)
+             12 LOAD_DEREF               3 (self)
+             14 LOAD_ATTR                0 (NUMS)
+             24 LOAD_DEREF               2 (I)
+             26 LOAD_FAST                1 (i)
+             28 BINARY_SUBSCR
+             38 BINARY_SUBSCR
+             48 LIST_APPEND              2
+             50 JUMP_BACKWARD           22 (to 8)
+        >>   52 RETURN_VALUE
+
+Disassembly of <code object emo_func_xor_byte at 0x78b999508510, file "./runtime.py", line 78>:
+ 78           0 RESUME                   0
+
+ 79           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (1)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE    81 (to 212)
+
+ 80          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (V1)
+
+ 81         100 LOAD_FAST                0 (self)
+            102 LOAD_ATTR                1 (STACK)
+            112 LOAD_METHOD              2 (pop)
+            134 PRECALL                  0
+            138 CALL                     0
+            148 STORE_FAST               3 (V2)
+
+ 82         150 LOAD_FAST                0 (self)
+            152 LOAD_ATTR                1 (STACK)
+            162 LOAD_METHOD              3 (append)
+            184 LOAD_FAST                2 (V1)
+            186 LOAD_FAST                3 (V2)
+            188 BINARY_OP               12 (^)
+            192 PRECALL                  1
+            196 CALL                     1
+            206 POP_TOP
+            208 LOAD_CONST               0 (None)
+            210 RETURN_VALUE
+
+ 84     >>  212 LOAD_GLOBAL              8 (EmptyStackException)
+            224 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_compare at 0x78b99943d6b0, file "./runtime.py", line 87>:
+ 87           0 RESUME                   0
+
+ 88           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (1)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE   112 (to 274)
+
+ 89          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (V1)
+
+ 90         100 LOAD_FAST                0 (self)
+            102 LOAD_ATTR                1 (STACK)
+            112 LOAD_METHOD              2 (pop)
+            134 PRECALL                  0
+            138 CALL                     0
+            148 STORE_FAST               3 (V2)
+
+ 91         150 LOAD_FAST                2 (V1)
+            152 LOAD_FAST                3 (V2)
+            154 COMPARE_OP               2 (==)
+            160 POP_JUMP_FORWARD_IF_FALSE    28 (to 218)
+
+ 92         162 LOAD_FAST                0 (self)
+            164 LOAD_ATTR                1 (STACK)
+            174 LOAD_METHOD              3 (append)
+            196 LOAD_CONST               1 (1)
+            198 PRECALL                  1
+            202 CALL                     1
+            212 POP_TOP
+            214 LOAD_CONST               0 (None)
+            216 RETURN_VALUE
+
+ 94     >>  218 LOAD_FAST                0 (self)
+            220 LOAD_ATTR                1 (STACK)
+            230 LOAD_METHOD              3 (append)
+            252 LOAD_CONST               2 (0)
+            254 PRECALL                  1
+            258 CALL                     1
+            268 POP_TOP
+            270 LOAD_CONST               0 (None)
+            272 RETURN_VALUE
+
+ 96     >>  274 LOAD_GLOBAL              8 (EmptyStackException)
+            286 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_jump_if at 0x78b99950c2f0, file "./runtime.py", line 99>:
+ 99           0 RESUME                   0
+
+100           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (0)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE    51 (to 152)
+
+101          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (C)
+
+103         100 LOAD_FAST                2 (C)
+            102 LOAD_CONST               2 (1)
+            104 COMPARE_OP               2 (==)
+            110 POP_JUMP_FORWARD_IF_FALSE    18 (to 148)
+
+104         112 LOAD_FAST                0 (self)
+            114 COPY                     1
+            116 LOAD_ATTR                3 (PC)
+            126 LOAD_CONST               2 (1)
+            128 BINARY_OP               13 (+=)
+            132 SWAP                     2
+            134 STORE_ATTR               3 (PC)
+            144 LOAD_CONST               0 (None)
+            146 RETURN_VALUE
+
+103     >>  148 LOAD_CONST               0 (None)
+            150 RETURN_VALUE
+
+106     >>  152 LOAD_GLOBAL              8 (EmptyStackException)
+            164 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_jump_back at 0x78b99950c9d0, file "./runtime.py", line 109>:
+109           0 RESUME                   0
+
+110           2 LOAD_FAST                0 (self)
+              4 LOAD_METHOD              0 (emo_func_push_byte)
+             26 PRECALL                  0
+             30 CALL                     0
+             40 POP_TOP
+
+111          42 LOAD_FAST                0 (self)
+             44 LOAD_ATTR                1 (STACK)
+             54 LOAD_METHOD              2 (pop)
+             76 PRECALL                  0
+             80 CALL                     0
+             90 STORE_FAST               2 (V)
+
+112          92 LOAD_FAST                3 (PC)
+             94 LOAD_FAST                2 (V)
+             96 BINARY_OP               23 (-=)
+            100 STORE_FAST               3 (PC)
+
+113         102 LOAD_GLOBAL              6 (F)
+            114 LOAD_METHOD              4 (seek)
+            136 LOAD_FAST                3 (PC)
+            138 PRECALL                  1
+            142 CALL                     1
+            152 POP_TOP
+            154 LOAD_CONST               0 (None)
+            156 RETURN_VALUE
+
+Disassembly of <code object emo_func_jump_forward at 0x78b99950cf50, file "./runtime.py", line 116>:
+116           0 RESUME                   0
+
+117           2 LOAD_FAST                0 (self)
+              4 LOAD_METHOD              0 (emo_func_push_byte)
+             26 PRECALL                  0
+             30 CALL                     0
+             40 POP_TOP
+
+118          42 LOAD_FAST                0 (self)
+             44 LOAD_ATTR                1 (STACK)
+             54 LOAD_METHOD              2 (pop)
+             76 PRECALL                  0
+             80 CALL                     0
+             90 STORE_FAST               2 (V)
+
+119          92 LOAD_FAST                3 (PC)
+             94 LOAD_FAST                2 (V)
+             96 BINARY_OP               13 (+=)
+            100 STORE_FAST               3 (PC)
+
+120         102 LOAD_GLOBAL              6 (F)
+            114 LOAD_METHOD              4 (seek)
+            136 LOAD_FAST                3 (PC)
+            138 PRECALL                  1
+            142 CALL                     1
+            152 POP_TOP
+            154 LOAD_CONST               0 (None)
+            156 RETURN_VALUE
+
+Disassembly of <code object emo_func_subtract at 0x78b999508850, file "./runtime.py", line 123>:
+123           0 RESUME                   0
+
+124           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (1)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE    81 (to 212)
+
+125          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (V1)
+
+126         100 LOAD_FAST                0 (self)
+            102 LOAD_ATTR                1 (STACK)
+            112 LOAD_METHOD              2 (pop)
+            134 PRECALL                  0
+            138 CALL                     0
+            148 STORE_FAST               3 (V2)
+
+127         150 LOAD_FAST                0 (self)
+            152 LOAD_ATTR                1 (STACK)
+            162 LOAD_METHOD              3 (append)
+            184 LOAD_FAST                2 (V1)
+            186 LOAD_FAST                3 (V2)
+            188 BINARY_OP               10 (-)
+            192 PRECALL                  1
+            196 CALL                     1
+            206 POP_TOP
+            208 LOAD_CONST               0 (None)
+            210 RETURN_VALUE
+
+129     >>  212 LOAD_GLOBAL              8 (EmptyStackException)
+            224 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_add at 0x78b999509070, file "./runtime.py", line 132>:
+132           0 RESUME                   0
+
+133           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (1)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE    81 (to 212)
+
+134          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (V1)
+
+135         100 LOAD_FAST                0 (self)
+            102 LOAD_ATTR                1 (STACK)
+            112 LOAD_METHOD              2 (pop)
+            134 PRECALL                  0
+            138 CALL                     0
+            148 STORE_FAST               3 (V2)
+
+136         150 LOAD_FAST                0 (self)
+            152 LOAD_ATTR                1 (STACK)
+            162 LOAD_METHOD              3 (append)
+            184 LOAD_FAST                2 (V1)
+            186 LOAD_FAST                3 (V2)
+            188 BINARY_OP                0 (+)
+            192 PRECALL                  1
+            196 CALL                     1
+            206 POP_TOP
+            208 LOAD_CONST               0 (None)
+            210 RETURN_VALUE
+
+138     >>  212 LOAD_GLOBAL              8 (EmptyStackException)
+            224 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_output_byte at 0x78b998d35de0, file "./runtime.py", line 141>:
+141           0 RESUME                   0
+
+142           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (STACK)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LOAD_CONST               1 (0)
+             42 COMPARE_OP               4 (>)
+             48 POP_JUMP_FORWARD_IF_FALSE    71 (to 192)
+
+143          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                1 (STACK)
+             62 LOAD_METHOD              2 (pop)
+             84 PRECALL                  0
+             88 CALL                     0
+             98 STORE_FAST               2 (V)
+
+144         100 LOAD_GLOBAL              6 (sys)
+            112 LOAD_ATTR                4 (stdout)
+            122 LOAD_METHOD              5 (write)
+            144 LOAD_GLOBAL             13 (NULL + chr)
+            156 LOAD_FAST                2 (V)
+            158 PRECALL                  1
+            162 CALL                     1
+            172 PRECALL                  1
+            176 CALL                     1
+            186 POP_TOP
+            188 LOAD_CONST               0 (None)
+            190 RETURN_VALUE
+
+146     >>  192 LOAD_GLOBAL             14 (EmptyStackException)
+            204 RAISE_VARARGS            1
+
+Disassembly of <code object emo_func_exit at 0x78b9994aec40, file "./runtime.py", line 149>:
+149           0 RESUME                   0
+
+150           2 LOAD_GLOBAL              1 (NULL + sys)
+             14 LOAD_ATTR                1 (exit)
+             24 LOAD_CONST               1 (0)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 POP_TOP
+             42 LOAD_CONST               0 (None)
+             44 RETURN_VALUE
+
+Disassembly of <code object run_program at 0x78b99943d890, file "./runtime.py", line 152>:
+152           0 RESUME                   0
+
+153           2 LOAD_CONST               1 (0)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (PC)
+
+154          16 NOP
+
+155     >>   18 LOAD_FAST                0 (self)
+             20 LOAD_ATTR                1 (P)
+             30 LOAD_FAST                0 (self)
+             32 LOAD_ATTR                0 (PC)
+             42 BINARY_SUBSCR
+             52 STORE_FAST               1 (I)
+
+156          54 LOAD_FAST                0 (self)
+             56 LOAD_ATTR                2 (EMO)
+             66 LOAD_METHOD              3 (get)
+             88 LOAD_FAST                1 (I)
+             90 LOAD_CONST               1 (0)
+             92 BINARY_SUBSCR
+            102 LOAD_CONST               0 (None)
+            104 PRECALL                  2
+            108 CALL                     2
+            118 STORE_FAST               2 (fn)
+
+157         120 LOAD_FAST                2 (fn)
+            122 POP_JUMP_FORWARD_IF_NONE    28 (to 180)
+
+158         124 PUSH_NULL
+            126 LOAD_FAST                2 (fn)
+            128 LOAD_FAST                1 (I)
+            130 PRECALL                  1
+            134 CALL                     1
+            144 POP_TOP
+
+159         146 LOAD_FAST                0 (self)
+            148 COPY                     1
+            150 LOAD_ATTR                0 (PC)
+            160 LOAD_CONST               3 (1)
+            162 BINARY_OP               13 (+=)
+            166 SWAP                     2
+            168 STORE_ATTR               0 (PC)
+            178 JUMP_FORWARD            56 (to 292)
+
+161     >>  180 LOAD_GLOBAL              9 (NULL + print)
+            192 LOAD_FAST                1 (I)
+            194 LOAD_CONST               1 (0)
+            196 BINARY_SUBSCR
+            206 PRECALL                  1
+            210 CALL                     1
+            220 POP_TOP
+
+162         222 LOAD_GLOBAL              9 (NULL + print)
+            234 LOAD_CONST               4 ('Invalid instruction encountered.')
+            236 PRECALL                  1
+            240 CALL                     1
+            250 POP_TOP
+
+163         252 LOAD_GLOBAL             11 (NULL + sys)
+            264 LOAD_ATTR                6 (exit)
+            274 LOAD_CONST               3 (1)
+            276 PRECALL                  1
+            280 CALL                     1
+            290 POP_TOP
+
+154     >>  292 JUMP_BACKWARD          138 (to 18)

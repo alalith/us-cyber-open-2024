@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "lateral-replica-423406-n3",
+  "private_key_id": "f892e5bfb33b5c946945b97c8827fe7fae7e00e5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDhZZ7vsq7lPDAD\nTPOlVcvotTzOR5+U4ShtKPnM4DGETbT2YxGk+0i6KF+k+sZBN681f6Nm5Qr7YjSR\nyv/62YUvDrvmyGARci6nynLRlzsQ4qUMcUNpYlVcIIvDePLYRuXxB9EfY00vwA7b\ndifMZcLcXxJ7D+labNQrbDtZY7HJG55rYTG42Q+eOrBuh8ZjNgtsRqg5hEAsFx4+\nY6sDOSG0/VM565mEwVpg9t6i7f4EeLZbx9MB5wem6RwCnNRfNJKQemIYJtZg1Bsz\n2zoiSaKURt2zmJeUZWDZ0oeCVjPD+WWknI4QhI4GkZ9wdxLT6sAWGd6uEpE4cUUq\nBNQEYRqnAgMBAAECggEAZw9eIt+i1LI2ievPpBOczuS/zto0/5AMOg14WtNQENyv\nF9GoqbU0RdpcEUWRDRT3ChE4l722zcbTnq4haYO4QBIOnLGWK6P37UTGR0tM+KWJ\nLi1D05XgzeUbwt80uuuADDu0xRNUobbBlFtsSytkc/sMqjRWUMBeKxSr9m19RyR8\nGQMW5jAQ56SMuiIYEe7RaDKuZvzlZETyj2I1mmlLUW0H5ABlHUiZutjya1CxpmbD\niW7p95+gTkwcT+jphX1CaSddsmhx+/+GRG9taKtiav+YG8vdQKghG477GOOnUTMd\nK2XcvIjjWNeK/lMpyZ4wmUmHpbb7fB6Cg2rjAMaskQKBgQDxLPuXxxbNCzHRqTlC\nIcr/AM0O2hSI5pjs9Bg5+YFj6zr+EQ5gUiG8+CJTcFnPKLABShjcSGnnqgJuMG5z\n0EuhlIgqO4GYJbOHYq4Qc+UDREE+P6L5oXoPZ6Nb/mdHz+jwtLa1rrkArvJ//iQ2\nCjUMV0dFha34VmxAowzTMp6X0wKBgQDvQFoEjN/pfYLK/xFLrvdY+UEOajlCbV5s\nKnTzwgRf4IyEeqcNGfiFnQW03j/wz07Dy6k6XRLrNbVlzaA1jJ0dSOLvn8RI+Wsn\n2c62awQccokf5NR6bC8eFo0WFzD92izeIaS/Dp+f/EWlCxsKmyIpkzwulOJFlD54\n/Hl6QK9hXQKBgH3qJlDPuK/EsHXuC97jFcCdAnJGmYIAIsdTiXJ7OXqZTWtoLEFN\noB+wzPsTJVBqxblmniQkCmbQ9APjdUcx8MqjaZPjDX4J8Pk2I/qjB2X1NLrzLnt2\nOuvgCAH3iKSNf+hr8RhZ6Gza6fC5Ft6/5YJT7vn1GScWt93nQsLhIrvRAoGBAJHf\nNINNuT/NTK+kMNFqTlkrL+UwEtVThZyBjmkIxE4IxOQJPE0appIgmNgcIfQbEbUD\nOZziHqTWTFFTu/iqUSkHxYXAbZboq9LSU9yZBxqpIr4VcQ9rYpb/vOnZHf/IxE5z\nSNVMfzq2P2hPix8+UufyY2ErWYJ+zlBJ728AfW3pAoGAd4SAQInUX8h97LxlKYxc\n11KOKf2SkARFpDu0MYab6Sn6SixkNmQT0EaJ7vSCoXhnUtIj8hJZX/tEWiu7LVRG\nw798Tu9cj1AMo+WzlbjDFNHoA/zE91h9gOCjGZW5TWW30CucI/InNCNHgc8dfu3U\nikFYN1wXF/DuPlyTonXYBwo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "user-service-account@lateral-replica-423406-n3.iam.gserviceaccount.com",
+  "client_id": "105437552107326132543",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/user-service-account%40lateral-replica-423406-n3.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
